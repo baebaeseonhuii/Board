@@ -12,20 +12,20 @@
     margin-top: 40px;
     }
 
-    .layout > input {
+    .layout input {
     width: 100%;
     box-sizing: border-box;
     margin-top: 10px;
     }
 
-    .layout > textarea {
+    .layout textarea {
     width: 100%;
     min-height: 300px;
     box-sizing: border-box;
     margin-top: 10px;
     }
 
-    .layout > button {
+    .layout button {
     width: 70px;
     height: 30px
 
@@ -36,10 +36,13 @@
 
 <body>
     <div class="layout">
-        <h1>Write Something</h1>
-        <input type="text">
-        <textarea></textarea>
-        <button>Write</button>
+        <form action = "/board/writepro" method="post">
+            <h1>Write Something</h1>
+            <input name="title" type="text">
+            <textarea name="content"></textarea>
+            <button type="submit">Write</button>
+        </form>
+
 
     </div>
 </body>
