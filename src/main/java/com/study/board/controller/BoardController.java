@@ -1,9 +1,8 @@
 package com.study.board.controller;
 
+import com.study.board.entity.Board;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class BoardController {
@@ -15,9 +14,10 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(String title, String content) {
-        System.out.println("Title: " + title);
-        System.out.println("Content: " + content);
+    public String boardWritePro(@RequestParam(name = "title") String title,  @RequestParam(name = "content") String content) {
+
+        System.out.println(title);
+        System.out.println(content);
         return "";
     }
 
