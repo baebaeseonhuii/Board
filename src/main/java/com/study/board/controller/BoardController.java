@@ -14,10 +14,10 @@ public class BoardController {
     }
 
     @PostMapping("/board/writepro")
-    public String boardWritePro(@RequestParam(name = "title") String title,  @RequestParam(name = "content") String content) {
+    public String boardWritePro(Board board) {
 
-        System.out.println(title);
-        System.out.println(content);
+        System.out.println(board.getTitle());
+        System.out.println(board.getContent());
         return "";
     }
 
