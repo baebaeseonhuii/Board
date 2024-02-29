@@ -13,13 +13,20 @@ public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
 
+    //write posts
     public void write(Board board) {
     boardRepository.save(board);
     }
 
+    //list the posts
     public List<Board> boardList() {
 
         return boardRepository.findAll();
 
+    }
+
+    //call specific posts
+    public Board boardView(Integer id) {
+        return boardRepository.findById(id).get();
     }
 }
