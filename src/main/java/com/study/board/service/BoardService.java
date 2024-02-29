@@ -25,8 +25,14 @@ public class BoardService {
 
     }
 
-    //call specific posts
+    //call posts
     public Board boardView(Integer id) {
         return boardRepository.findById(id).get();
+    }
+
+    //delete post
+
+    public void boardDelete(Integer id) {
+        boardRepository.deleteById(id);
     }
 }
